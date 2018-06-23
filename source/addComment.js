@@ -2,7 +2,7 @@
   let newCommentForm, comment, author, comments;
 
   $(document).ready(function(){
-    comments = $('#comments');
+    comments = $('#comment_list');
 
     let newCommentBtn = $('#new_comment_button');
     newCommentForm = $('#new_comment');
@@ -28,6 +28,15 @@
   };
 
   const buildComment = (comment, author) => {
+    let _comment = $('<li></li>');
+    let _author = $('<span></span>');
 
+    $(_comment).text(comment);
+
+    $(_author).addClass('author').text(author);
+
+    $(_comment).append(_author);
+
+    return _comment;
   };
 })();
