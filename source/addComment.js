@@ -28,6 +28,9 @@
     let _comment = buildComment(_content, $(author).val() );
 
     $(comments).append(_comment);
+
+    $(newCommentForm)[0].reset(); // Clear the form
+    $(newCommentForm).hide();
   };
 
   const buildComment = (comment, author) => {
