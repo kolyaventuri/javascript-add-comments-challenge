@@ -8,7 +8,7 @@
     newCommentForm = $('#new_comment');
 
     comment = $('#new_comment #comment');
-    author = $('#new_comment #author');
+    author = $('#new_comment #authorName');
 
     // Show the form
     $(newCommentBtn).click(() => {
