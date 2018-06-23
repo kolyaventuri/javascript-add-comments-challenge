@@ -21,8 +21,11 @@
 
   const addComment = (event) => {
     event.preventDefault();
+    let _content =  $(comment).val();
 
-    let _comment = buildComment( $(comment).val(), $(author).val() );
+    if(!_content) return;
+
+    let _comment = buildComment(_content, $(author).val() );
 
     $(comments).append(_comment);
   };
